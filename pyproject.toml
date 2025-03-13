@@ -15,9 +15,13 @@ dependencies = [
 ]
 
 [tool.taskipy.tasks]
-serve = { cmd = "mkdocs serve", help = "Starts server." }
+serve = { cmd = "mkdocs serve", help = "Start server." }
 build = { cmd = "mkdocs build", help = "Deploy static files to site/ folder." }
 new_file = { cmd = "poetry run python scripts/new_file.py", help = "Create new files." }
+tests = { cmd = "pytest", help = "Run project tests" }
 
 [tool.poetry]
 package-mode = false
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"

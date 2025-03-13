@@ -7,16 +7,15 @@ from slugify import slugify
 
 locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
-def create_note(post_topic_name):
-    # Get current date
-    today = datetime.date.today()
+def create_note(post_topic_name, base_dir='docs', custom_date=None):
+    today = custom_date or datetime.date.today()
     year = str(today.year)
     month = f'{today.month:02d}_{calendar.month_name[today.month].title()}'
     post_topic_slugify = slugify(post_topic_name, separator='_')
     file_name = f"{today.strftime('%Y%m%d')}_{post_topic_slugify}.md"
 
     # Define directory structure
-    year_dir = os.path.join('docs', year)
+    year_dir = os.path.join(base_dir, year)
     month_dir = os.path.join(year_dir, month)
     file_path = os.path.join(month_dir)
     file_path = os.path.join(month_dir, file_name)
