@@ -3,7 +3,7 @@ tags:
   - git
 ---
 
-# Como criar branch vazia
+# Como criar uma branch vazia
 
 [Esta resposta stackoverflow](https://stackoverflow.com/a/34100189/11755155) mostrou que basta usar a flag `--orphan` no comando `switch`:
 

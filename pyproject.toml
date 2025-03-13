@@ -9,12 +9,15 @@ readme = "README.md"
 requires-python = ">=3.13.1,<4.0"
 dependencies = [
     "mkdocs-material (>=9.6.5,<10.0.0)",
-    "taskipy (>=1.14.1,<2.0.0)"
+    "taskipy (>=1.14.1,<2.0.0)",
+    "ipdb (>=0.13.13,<0.14.0)",
+    "python-slugify (>=8.0.4,<9.0.0)"
 ]
 
 [tool.taskipy.tasks]
 serve = { cmd = "mkdocs serve", help = "Starts server." }
 build = { cmd = "mkdocs build", help = "Deploy static files to site/ folder." }
+new_file = { cmd = "poetry run python scripts/new_file.py", help = "Create new files." }
 
 [tool.poetry]
 package-mode = false

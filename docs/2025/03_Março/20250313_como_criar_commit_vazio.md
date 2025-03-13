@@ -3,7 +3,7 @@ tags:
   - git
 ---
 
-# Como criar branch vazia
+# Como criar um commit vazio
 
 [Este post](https://graphite.dev/guides/empty-commit) mostrou que basta usar a flag `--allow-empty` no comando `commit`:
 
