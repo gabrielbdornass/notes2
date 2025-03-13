@@ -8,3 +8,6 @@ theme:
 plugins:
   - search
   - tags:
+
+markdown_extensions:
+  - footnotes
