@@ -11,12 +11,10 @@ Uma pesquisa no Google sobre o que é Github Streak (What is The Github Streak?)
 
 - **The streak** is a visual representation of your coding activity on GitHub, displayed as a series of colored squares on your contribution graph[^1].
 
-
 <figure>
   <img src="https://ghchart.rshah.org/gabrielbdornas" alt="gabrielbdornas' contributions">
   <figcaption>Source: <a href="https://github.com/gabrielbdornas#:~:text=2%2C236-,contributions,-in%20the%20last">gabrielbdornas'</a>contributions</figcaption>
 </figure>
-
 
 - **How it works**: Each colored square represents a day where you made a contribution (commit, pull request, or issue) to a repository. The longer the streak, the more consecutive colored squares you'll see.
 
