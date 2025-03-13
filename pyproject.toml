@@ -11,7 +11,8 @@ dependencies = [
     "mkdocs-material (>=9.6.5,<10.0.0)",
     "taskipy (>=1.14.1,<2.0.0)",
     "ipdb (>=0.13.13,<0.14.0)",
-    "python-slugify (>=8.0.4,<9.0.0)"
+    "python-slugify (>=8.0.4,<9.0.0)",
+    "mkdocs-git-revision-date-localized-plugin (>=1.4.4,<2.0.0)",
 ]
 
 [tool.taskipy.tasks]
