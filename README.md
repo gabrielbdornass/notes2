@@ -15,7 +15,7 @@ touch .env # Add GH_TOKEN to Document contributors plugin
 task serve
 ```
 
-- Commit and push changes are enoth to guild and deploy the content to render.
+- Commit and push changes are enoth to build and deploy the content to render.
 This push will trigger the `publish_render_pages` GitHub Actions workflow that builds the site and pushes the generated static files to the render-pages branch.
 
 [^1]: See [Document contributors](https://squidfunk.github.io/mkdocs-material/setup/adding-a-git-repository/?h=document+contributors#document-contributors) documentation.
