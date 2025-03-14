@@ -14,11 +14,12 @@ dependencies = [
     "python-slugify (>=8.0.4,<9.0.0)",
     "mkdocs-git-revision-date-localized-plugin (>=1.4.4,<2.0.0)",
     "mkdocs-git-committers-plugin-2 (>=2.5.0,<3.0.0)",
+    "python-dotenv (>=1.0.1,<2.0.0)",
 ]
 
 [tool.taskipy.tasks]
-serve = { cmd = "mkdocs serve", help = "Start server." }
-build = { cmd = "mkdocs build", help = "Deploy static files to site/ folder." }
+serve = { cmd = "dotenv run mkdocs serve", help = "Start server." }
+build = { cmd = "dotenv run mkdocs build", help = "Deploy static files to site/ folder." }
 new_file = { cmd = "poetry run python scripts/new_file.py", help = "Create new files." }
 tests = { cmd = "pytest", help = "Run project tests" }
 
