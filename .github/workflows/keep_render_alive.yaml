@@ -6,12 +6,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  keep_alive:
+  keep_render_alive:
     runs-on: ubuntu-latest
     steps:
     - name: Send request to keep Render alive
       run: |
-        curl -s -o /dev/null -w "%{http_code}" https://note.braico.me/
+        curl -s -o /dev/null -w "%{http_code}" https://notes.braico.me/
     - name: Workflow failure notification
       uses: JasonEtco/create-an-issue@v2
       if: failure()
