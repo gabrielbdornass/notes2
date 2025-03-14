@@ -18,7 +18,8 @@ dependencies = [
 ]
 
 [tool.taskipy.tasks]
-serve = { cmd = "dotenv run mkdocs serve", help = "Start server." }
+devserve = { cmd = "dotenv run mkdocs serve", help = "Start server." }
+prodserve = { cmd = "mkdocs serve", help = "Start server." }
 build = { cmd = "dotenv run mkdocs build", help = "Deploy static files to site/ folder." }
 new_file = { cmd = "poetry run python scripts/new_file.py", help = "Create new files." }
 tests = { cmd = "pytest", help = "Run project tests" }
