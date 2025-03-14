@@ -37,6 +37,8 @@ jobs:
           version: 2.0.1
 
       - name: Publish Documentation
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
           poetry install
           MKDOCS_VERSION=$(poetry run mkdocs --version | awk '{print $3}')
