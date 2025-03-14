@@ -46,7 +46,7 @@ jobs:
           COMMIT_MESSAGE="Build site $COMMIT_HASH with MkDocs version: $MKDOCS_VERSION"
           export GH_TOKEN=$GH_TOKEN
           poetry run task prodbuild
-          git add -f site/
+          git add -f site/ .cache/
           git commit -m "$COMMIT_MESSAGE"
           git switch --orphan render-pages || true
           git checkout render-pages || true
