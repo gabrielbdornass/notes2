@@ -12,6 +12,10 @@ plugins:
       enable_creation_date: true
       type: datetime
       timezone: America/Sao_Paulo
+  - git-committers:
+      repository: gabrielbdornas/notes
+      branch: main
+      token: !ENV ['GH_TOKEN']
 
 markdown_extensions:
   - footnotes

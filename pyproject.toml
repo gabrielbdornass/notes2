@@ -13,6 +13,7 @@ dependencies = [
     "ipdb (>=0.13.13,<0.14.0)",
     "python-slugify (>=8.0.4,<9.0.0)",
     "mkdocs-git-revision-date-localized-plugin (>=1.4.4,<2.0.0)",
+    "mkdocs-git-committers-plugin-2 (>=2.5.0,<3.0.0)",
 ]
 
 [tool.taskipy.tasks]
