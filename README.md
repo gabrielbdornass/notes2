@@ -12,7 +12,7 @@ git clone git@github.com:gabrielbdornas/notes.git
 cd notes
 poetry install
 touch .env # Add GH_TOKEN to Document contributors plugin
-task devserve
+task serve
 ```
 
 - Commit and push changes are enoth to guild and deploy the content to render.

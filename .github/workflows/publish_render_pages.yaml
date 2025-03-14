@@ -42,7 +42,7 @@ jobs:
           MKDOCS_VERSION=$(poetry run mkdocs --version | awk '{print $3}')
           COMMIT_HASH=$(git rev-parse --short HEAD)
           COMMIT_MESSAGE="Build site $COMMIT_HASH with MkDocs version: $MKDOCS_VERSION"
-          poetry run task build
+          poetry run task prodbuild
           git add -f site/
           git commit -m "$COMMIT_MESSAGE"
           git switch --orphan render-pages || true
