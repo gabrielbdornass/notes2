@@ -37,4 +37,4 @@ Basta inverter a ordem dos commits no arquivo aberto, salvar e fechar.
 ## Outras referências
 
 - [7.6 Git Tools - Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History).
-- [chatGPT](https://chatgpt.com/share/67d33787-4a54-8003-8c39-064243034897).
+- [chatGPT](https://chatgpt.com/c/67d5ed24-7a94-8003-b360-b11219c99a64).
