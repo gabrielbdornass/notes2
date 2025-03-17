@@ -16,6 +16,10 @@ Neste caso, a flag `--root` deveria ter sido utilizada no lugar de `HEAD~2`:
 git rebase -i --root
 ```
 
+!!! Warning
+
+    [Cuidado ao modificar commits já enviados para GitHub](./20250317_cuidado_ao_modificar_commits_ja_enviados_para_github.md), pois será necessário realizar `pull/push` com a flag `--force`.
+
 ## Outras referências
 
 - [7.6 Git Tools - Rewriting History](https://git-scm.com/book/en/v2/Git-Tools-Rewriting-History).

@@ -18,21 +18,9 @@ git rebase -i HEAD~n
 Será aberta uma lista com os `n` commits desejados.
 Basta inverter a ordem dos commits no arquivo aberto, salvar e fechar.
 
-??? warning "Atenção para commits já enviados para o GitHub:"
+!!! Warning
 
-    Será necessário realizar `pull/push` com a flag `--force`.
-    Lembre-se que isso é especialmente perigoso quando estamos trabalhando em equipe.
-    Alguém que tenha realizado um `pull` antes do seu `--force` terá um conflito com o novo código, pois seu histórico de commits ficará diferente do histórico do repositório.
-
-    **Nunca realize um `--force` sem antes conversar com os colegas e entender as implicações desta ação.**
-
-    > If you've already pushed your commit up to your remote branch, then, after amending your commit locally, you'll also need to force push the commit with:
-    >
-    >```
-    >git push <remote> <branch> --force
-    ># Or
-    >git push <remote> <branch> -f
-    >```
+    [Cuidado ao modificar commits já enviados para GitHub](./20250317_cuidado_ao_modificar_commits_ja_enviados_para_github.md), pois será necessário realizar `pull/push` com a flag `--force`.
 
 ## Outras referências
 
