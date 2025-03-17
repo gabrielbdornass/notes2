@@ -1,6 +1,6 @@
 ---
 tags:
-  - git
+  - Git
 ---
 # git rebase com o primeiro commit
 

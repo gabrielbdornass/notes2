@@ -1,6 +1,6 @@
 ---
 tags:
-  - git
+  - Git
 ---
 
 # Como criar uma branch vazia

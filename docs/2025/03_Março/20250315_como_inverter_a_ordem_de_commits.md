@@ -1,7 +1,7 @@
 ---
 tags:
-  - git
-  - github
+  - Git
+  - GitHub
 ---
 
 # Como inverter a ordem de commits

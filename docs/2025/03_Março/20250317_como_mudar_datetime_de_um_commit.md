@@ -1,7 +1,7 @@
 ---
 tags:
-  - git
-  - github
+  - Git
+  - GitHub
 ---
 
 # Como mudar datetime de um commit

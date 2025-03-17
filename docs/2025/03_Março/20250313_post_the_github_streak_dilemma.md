@@ -1,6 +1,6 @@
 ---
 tags:
-  - github
+  - GitHub
 ---
 
 # Post The Github Streak Dilemma: useful or not?

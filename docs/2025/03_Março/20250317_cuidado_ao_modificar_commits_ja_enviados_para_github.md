@@ -1,7 +1,7 @@
 ---
 tags:
-  - git
-  - github
+  - Git
+  - GitHub
 ---
 
 # Cuidado ao modificar commits já enviados para GitHub

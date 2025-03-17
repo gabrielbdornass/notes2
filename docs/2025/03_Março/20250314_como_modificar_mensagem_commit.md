@@ -1,7 +1,7 @@
 ---
 tags:
-  - git
-  - github
+  - Git
+  - GitHub
 ---
 
 # Como modificar a mensagem de um commit
