@@ -21,7 +21,7 @@ dependencies = [
 serve = { cmd = "dotenv run mkdocs serve", help = "Start server." }
 devbuild = { cmd = "dotenv run mkdocs build", help = "Deploy static files to site/ folder in dev mode." }
 prodbuild = { cmd = "mkdocs build", help = "Deploy static files to site/ folder in prod mode." }
-new_file = { cmd = "poetry run python scripts/new_file.py", help = "Create new files." }
+new_note = { cmd = "poetry run python scripts/new_file.py", help = "Create new files." }
 tests = { cmd = "pytest", help = "Run project tests" }
 
 [tool.poetry]
