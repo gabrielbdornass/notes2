@@ -16,6 +16,10 @@ plugins:
       repository: gabrielbdornas/notes
       branch: main
       token: !ENV ['GH_TOKEN']
+  - mkdocs-video:
+      video_muted: True
+      video_controls: True
+      video_autoplay: False
 
 markdown_extensions:
   - footnotes
