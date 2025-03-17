@@ -71,3 +71,7 @@ Para quem deseja aproveitar essas oportunidades, é essencial:
 - **Financiamento e Condições**, pois existem opções de financiamento de até **95% do valor do imóvel**.
 - **Venda direta pode valer a pena**, mesmo tendo passado por tantas modalidades e ninguém comprado.
 - **Compra só é boa quando o imóvel é comprado abaixo do valor de mercado**.
+
+## Outras referências
+
+- [chatGPT](https://chatgpt.com/share/67d812ce-3818-8003-b3ac-1aa7c4c741aa)
