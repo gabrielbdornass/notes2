@@ -22,3 +22,4 @@ git push -u origin <new branch>
 ## Outras referências
 
 - [Creating Orphan branches in Git](https://medium.com/@salmankhan_27014/creating-orphan-branches-in-git-853eb8f7c9c6): Mostra a utilização da flag `--orphan` no comando `switch` e `git rm -rf .` para limpar o conteúdo da nova branch.
+
