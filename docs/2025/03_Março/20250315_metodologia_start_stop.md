@@ -1,3 +1,8 @@
+---
+tags:
+  - Office like code
+---
+
 # Metodologia start stop
 
 Acredito que amadureci alguns pontos sobre a lógica para [calcular tempo gasto para finalizar um issue](https://github.com/meadapt/planner/issues/25).

@@ -2,6 +2,7 @@
 tags:
   - Git
 ---
+
 # git rebase com o primeiro commit
 
 A nota [Como modificar a mensagem de um commit](./20250314_como_modificar_mensagem_commit.md) mostra como usar o comando `rebase` no modo interativo `-i`.
