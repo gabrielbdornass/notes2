@@ -39,6 +39,7 @@ jobs:
       - name: Publish Documentation
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          ALLOW_GIT_COMMITTERS_BUILD: ${{ secrets.ALLOW_GIT_COMMITTERS_BUILD }}
         run: |
           poetry install
           MKDOCS_VERSION=$(poetry run mkdocs --version | awk '{print $3}')

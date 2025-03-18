@@ -15,6 +15,7 @@ plugins:
   - git-committers:
       repository: gabrielbdornas/notes
       branch: main
+      enabled: !ENV ALLOW_GIT_COMMITTERS_BUILD
       token: !ENV ['GH_TOKEN']
   - mkdocs-video:
       video_muted: True
