@@ -11,7 +11,9 @@ Created from [login-static-site](https://github.com/meadapt/login-static-site) r
 git clone git@github.com:gabrielbdornas/notes.git
 cd notes
 poetry install
-touch .env # Add GH_TOKEN to Document contributors plugin
+
+# Add GH_TOKEN and ALLOW_GIT_COMMITTERS_BUILD to Document contributors plugin
+touch .env
 task serve
 ```
 
