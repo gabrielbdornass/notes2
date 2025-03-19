@@ -1,9 +1,16 @@
-site_name: My Docs
+# Repository
+site_name: Notes
+repo_name: gabrielbdornas/notes
+repo_url: https://github.com/gabrielbdornas/notes
+edit_uri: edit/main/docs/
+
 theme:
   name: material
   features:
     - search.suggest
     - search.highlight
+    - content.action.edit
+    - content.action.view
 
 plugins:
   - search
