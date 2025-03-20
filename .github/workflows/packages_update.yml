@@ -1,4 +1,4 @@
-name: Update Python Poetry packages
+name: Packages update
 
 on:
   # Allow manual triggers.
@@ -8,7 +8,7 @@ on:
     - cron: "0 0 * * 1"
 
 jobs:
-  update-packages:
+  packages_update:
     runs-on: ubuntu-latest
     steps:
       - name: Update Python packages
@@ -23,4 +23,4 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         with:
-          filename: .github/poetry_update_actions_failure.md
+          filename: .github/workflow_packages_update_failure.md
