@@ -15,6 +15,7 @@ jobs:
         uses: fuzzylabs/gha-poetry-update@v1
         with:
           base-branch: main
+          poetry-version: '2.0.1'
       - name: Run tests
         run: poetry run pytest
       - name: Workflow failure notification
