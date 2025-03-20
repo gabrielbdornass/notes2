@@ -16,17 +16,17 @@ def setup_and_teardown():
     yield
     shutil.rmtree(TEST_DIR)  # Clean up after test
 
-@pytest.mark.parametrize('test_date', [
-    datetime.date(2025, 1, 1),
-    datetime.date(2024, 12, 25),
-    datetime.date(2023, 7, 4),
-    datetime.date(2022, 3, 15),
+@pytest.mark.parametrize('test_date, month', [
+    (datetime.date(2025, 1, 1), '01_Janeiro'),
+    (datetime.date(2024, 12, 25), '12_Dezembro'),
+    (datetime.date(2023, 7, 4), '07_Julho'),
+    (datetime.date(2022, 3, 15), '03_Março'),
 ])
-def test_create_note(test_date):
+def test_create_note(test_date, month):
     """Test if the note is created correctly."""
     post_topic = 'Test Post'
     year = str(test_date.year)
-    month = f'{test_date.month:02d}_{test_date.strftime('%B').title()}'
+    # month = f'{test_date.month:02d}_{test_date.strftime('%B').title()}'
     filename = f'{test_date.strftime('%Y%m%d')}_test_post.md'
 
     # Call the function with a custom base directory

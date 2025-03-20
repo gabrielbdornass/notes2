@@ -1,0 +1,28 @@
+name: Packages update
+
+on:
+  # Allow manual triggers.
+  workflow_dispatch:
+  # Automatically run once a week.
+  schedule:
+    - cron: "0 0 * * 1"
+
+jobs:
+  packages_update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Update Python packages
+        uses: fuzzylabs/gha-poetry-update@v1
+        with:
+          base-branch: main
+          poetry-version: '2.0.1'
+      - name: Run tests
+        run: poetry run pytest
+      - name: Workflow failure notification
+        uses: JasonEtco/create-an-issue@v2
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          RUNID: ${{ github.run_id }}
+        with:
+          filename: .github/workflow_packages_update_failure.md

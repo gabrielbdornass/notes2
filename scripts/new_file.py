@@ -4,13 +4,17 @@ import sys
 import datetime
 import locale
 from slugify import slugify
+from babel.dates import get_month_names
 
-locale.setlocale(locale.LC_ALL, 'pt_BR.utf8')
 
 def create_note(post_topic_name, base_dir='docs', custom_date=None):
     today = custom_date or datetime.date.today()
     year = str(today.year)
-    month = f'{today.month:02d}_{calendar.month_name[today.month].title()}'
+
+    # Use Babel to get month names in Portuguese
+    month_name = get_month_names('wide', locale='pt_BRmonth')[today.month]
+    month = f'{today.month:02d}_{month_name.title()}'
+
     post_topic_slugify = slugify(post_topic_name, separator='_')
     file_name = f"{today.strftime('%Y%m%d')}_{post_topic_slugify}.md"
 
