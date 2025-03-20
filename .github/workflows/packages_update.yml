@@ -22,5 +22,6 @@ jobs:
         if: failure()
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+          RUNID: ${{ github.run_id }}
         with:
           filename: .github/workflow_packages_update_failure.md
