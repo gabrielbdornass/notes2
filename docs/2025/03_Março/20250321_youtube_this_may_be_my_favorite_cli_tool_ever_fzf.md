@@ -11,26 +11,6 @@ tags:
 
 ## Instalação
 
-Instalando via [git](https://github.com/junegunn/fzf?tab=readme-ov-file#using-git). (1)
-{ .annotate }
-
-1. :man_raising_hand: Vídeo instala via [Linux packages](https://github.com/junegunn/fzf?tab=readme-ov-file#installation).
-
-```
-git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
-~/.fzf/install
-```
-
-Para configurar integração com shell incluir no arquivo `~/.zshrc`
-
-```
-# Set up fzf key bindings and fuzzy completion
-source <(fzf --zsh)
-
-# Após inclusão é necessário
-source ~/.zshrc
-```
-
 ??? note "Erro `unknown option: --zsh` ao rodar `source ~/.zshrc`"
 
     Tentei instalar da primeira vez, conforme mostrado no vídeo, via [Linux packages](https://github.com/junegunn/fzf?tab=readme-ov-file#installation):
@@ -38,7 +18,6 @@ source ~/.zshrc
     ```
     sudo apt install fzf
     ```
-
 
     [A própria documentação](https://github.com/junegunn/fzf?tab=readme-ov-file#installation:~:text=fish%20%7C%20source-,Note,-%2D%2Dbash%2C%20%2D%2Dzsh) estava dizendo que a opção `--zsh` só estava disponível na versão `0.48` ou superior
 
@@ -56,6 +35,41 @@ source ~/.zshrc
 
     A solução foi dada [nesta resposta stackoverflow](https://askubuntu.com/a/1515772/1075583), instalando usando git, **opção final de instalação documentada no início da nota**.
 
+Instalando via [git](https://github.com/junegunn/fzf?tab=readme-ov-file#using-git). (1)
+{ .annotate }
+
+1. :man_raising_hand: Vídeo instala via [Linux packages](https://github.com/junegunn/fzf?tab=readme-ov-file#installation).
+
+```
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
+```
+
+??? note "/home/gabrielbdornas/.zshrc:80: command not found: fzf"
+
+    Após instalação via `git`, segui a [documentação](https://github.com/junegunn/fzf?tab=readme-ov-file#setting-up-shell-integration) para configurar a integração com terminal:
+
+
+    ```
+    # Set up fzf key bindings and fuzzy completion
+    # `~/.zshrc`
+    source <(fzf --zsh)
+
+    # Após inclusão é necessário
+    source ~/.zshrc
+    ```
+
+    Mas ao abrir um novo terminal acabava recebendo o erro:
+
+    ```
+    /home/gabrielbdornas/.zshrc:80: command not found: fzf
+    ```
+
+    Percebi que a instalação via `git` também incluiu no arquivo `~/.zshrc` a linha `[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh`.
+    Além do arquivo `.fzf.zsh`, com a mesma configuração sugerida para ser incluída no `~/.zshrc` (`source <(fzf --zsh)`).
+
+    **Solução do erro**: Retirei a configuração `source <(fzf --zsh)`, feita por mim, no arquivo `~/.zshrc`.
+
 ## Utilização
 
 - Basta utilizar o comando `fzf` para iniciar o modo de pesquisa de arquivos.
@@ -65,7 +79,7 @@ source ~/.zshrc
 Mas como eu não tinha o programa insalado tive que realizar a instalação com `sudo apt install bat`.(1)
 { .annotate }
 
-1.
+    1. :man_raising_hand: A instalação do `bat` criou o [executável `batcat` na minha máquina](https://github.com/sharkdp/bat/issues/1420#issuecomment-737058971), que me exigiu criar um link simbólico para conseguir chamar o comando `bat` no terminal (`ln -s /usr/bin/batcat ~/.local/bin/bat`), e por consequência dentro do comando `fzf --preview="bat {}"`.
 
 
 ## Investigações
