@@ -12,6 +12,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
       - name: Read Python and Poetry versions
         run: |
           echo "PYTHON_VERSION=$(cat .python-version)" >> $GITHUB_ENV
