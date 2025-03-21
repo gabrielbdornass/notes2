@@ -11,10 +11,14 @@ tags:
 
 ## Instalação
 
-Segundo [documentação](https://github.com/junegunn/fzf?tab=readme-ov-file#installation):
+Instalando via [git](https://github.com/junegunn/fzf?tab=readme-ov-file#using-git). (1)
+{ .annotate }
+
+1. :man_raising_hand: Vídeo instala via [Linux packages](https://github.com/junegunn/fzf?tab=readme-ov-file#installation).
 
 ```
-sudo apt install fzf
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install
 ```
 
 Para configurar integração com shell incluir no arquivo `~/.zshrc`
@@ -22,9 +26,19 @@ Para configurar integração com shell incluir no arquivo `~/.zshrc`
 ```
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
+
+# Após inclusão é necessário
+source ~/.zshrc
 ```
 
 ??? note "Erro `unknown option: --zsh` ao rodar `source ~/.zshrc`"
+
+    Tentei instalar da primeira vez, conforme mostrado no vídeo, via [Linux packages](https://github.com/junegunn/fzf?tab=readme-ov-file#installation):
+
+    ```
+    sudo apt install fzf
+    ```
+
 
     [A própria documentação](https://github.com/junegunn/fzf?tab=readme-ov-file#installation:~:text=fish%20%7C%20source-,Note,-%2D%2Dbash%2C%20%2D%2Dzsh) estava dizendo que a opção `--zsh` só estava disponível na versão `0.48` ou superior
 
@@ -40,4 +54,21 @@ source <(fzf --zsh)
     Rodei o comando `sudo apt upgrade fzf` para tentar atualizar a versão `fzf`, mas não funcionou.
     Acredito que este comando fez um upgrade em todos os pacotes/programas do computador elegíveis para, mas como o `fzf` já estava em sua última versão disponível, ele não foi atualizado.
 
-    A solução foi dada [nesta resposta stackoverflow](https://askubuntu.com/a/1515772/1075583), instalando usando git.
+    A solução foi dada [nesta resposta stackoverflow](https://askubuntu.com/a/1515772/1075583), instalando usando git, **opção final de instalação documentada no início da nota**.
+
+## Utilização
+
+- Basta utilizar o comando `fzf` para iniciar o modo de pesquisa de arquivos.
+- Percebi que rodando dentro de uma pasta, por exemplo `code/` a pesquisa vai mais rápido, evitando ter que olhar os arquivos de toda máquina.
+- Comando `fzf --preview="cat {}"` para apresentar um preview do arquivo.
+- Depois o preview foi utilizado com `bat` (`fzf --preview="cat {}"`).
+Mas como eu não tinha o programa insalado tive que realizar a instalação com `sudo apt install bat`.(1)
+{ .annotate }
+
+1.
+
+
+## Investigações
+
+- Percebi que `fzf` está buscando todos os arquivos, inclusive os dos ambientes virtuais Python (`venv` ou `.venv`).
+Seria interessante ter um `.ignore` para estas pastas.
