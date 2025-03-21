@@ -51,5 +51,34 @@ Poderia ser algo:
     Neste cenário, commits em pares, seria utilizados para o cálculo.
 - A gestão de board de projeto de equipe seria mais importante, do ponto de vista de gestão de time do que acompanhar estes indicadores.
 
+## Atualização 20/03/2024
+
+- Com auxílio do [chatGPT](https://chatgpt.com/c/67da1c49-4f24-8003-8bbc-1cc5a1188f8a) criei uma função para simplificar o processo start-stop:
+
+```
+nano ~/.bashrc  # or ~/.zshrc if you're using Zsh
+
+# ~/.zshrc
+
+start() {
+    if [ -z "$1" ]; then
+        echo "Usage: start <issue_number>"
+        return 1
+    fi
+    git commit --allow-empty -m "$1-start" -m "See #$1"
+    echo "Started tracking Issue #$1"
+}
+
+stop() {
+    if [ -z "$1" ]; then
+        echo "Usage: stop <issue_number>"
+        return 1
+    fi
+    git commit --allow-empty -m "$1-stop" -m "See #$1"
+    echo "Stopped tracking Issue #$1"
+}
+```
+
+Com isso basta rodar `start <issue-number>` e `stopt <issue-number>` para registrar o tempo gasto entre os commits responsáveis pela finalização de um Issue.
 
 [^1]: Realmente [não é muito fácil no início](https://github.com/meadapt/planner/issues/25#issuecomment-2387357354), mas a maturidade e a vontade de dar certo fazem um pouco de difirença.
