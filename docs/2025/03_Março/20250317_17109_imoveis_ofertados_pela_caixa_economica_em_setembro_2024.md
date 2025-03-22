@@ -1,6 +1,7 @@
 ---
 tags:
   - Leilões
+  - YouTube
 ---
 
 # YouTube | 17.109 Imóveis Ofertados Pela Caixa Econômica em Setembro
