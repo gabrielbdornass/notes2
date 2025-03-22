@@ -1,6 +1,7 @@
 ---
 tags:
   - Linux
+  - YouTube
 ---
 
 # YouTube | This may be my favorite CLI tool ever fzf
@@ -81,8 +82,18 @@ Mas como eu não tinha o programa insalado tive que realizar a instalação com 
 
     1. :man_raising_hand: A instalação do `bat` criou o [executável `batcat` na minha máquina](https://github.com/sharkdp/bat/issues/1420#issuecomment-737058971), que me exigiu criar um link simbólico para conseguir chamar o comando `bat` no terminal (`ln -s /usr/bin/batcat ~/.local/bin/bat`), e por consequência dentro do comando `fzf --preview="bat {}"`.
 
+- O comando `fzf` foi sendo aprimorado para abrir multiplos arquivos usando VsCode: `code $(fzf -m --preview="bat --color=always {}")`.
+- Comando `cd` com habilidade de buscar qualquer pasta no computador. Basta usar `**` para mostrar `fzf` o que deve ser procurado.
+Exemplo: `cd dados-arma**`.
+Usar `cd ~/folder**` ajuda a encontrar arquivos que estão no usuário e não apenas no diretório atual.
+- Comando para matar processo sem precisar rodar dois comandos (`ps -eaf | grep <process-name>` e `kill -9 <process-id>`).
+Neste cenário, basta rodar `kill -9 **` e será aberto barra para pesquisa do processo que se deseja finalizar.
+- `unalias **` irá listar todos os `aliases` da máquina e dará a oportunidade de descadastrar o selecionado.
 
 ## Investigações
 
 - Percebi que `fzf` está buscando todos os arquivos, inclusive os dos ambientes virtuais Python (`venv` ou `.venv`).
 Seria interessante ter um `.ignore` para estas pastas.
+- Como criar um alias para abrir um projeto inteiro no VsCode?
+Imagine que vamos fazer uma busca no arquivo.
+Quando encontrarmos, abrimos o projeto todo.
