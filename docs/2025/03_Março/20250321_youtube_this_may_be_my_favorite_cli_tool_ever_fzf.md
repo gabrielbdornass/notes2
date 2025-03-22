@@ -93,7 +93,14 @@ Neste cenário, basta rodar `kill -9 **` e será aberto barra para pesquisa do p
 ## Investigações
 
 - Percebi que `fzf` está buscando todos os arquivos, inclusive os dos ambientes virtuais Python (`venv` ou `.venv`).
-Seria interessante ter um `.ignore` para estas pastas.
+Seria interessante ter um `.ignore` para estas pastas. (1)
+{ .annotate }
+
+    1. :man_raising_hand: Descobri que a ferramenta `fdfind` respeita o arquivo `.gitignore`. See [fzf aliases](./20250322_fzf_aliases.md).
+
 - Como criar um alias para abrir um projeto inteiro no VsCode?
 Imagine que vamos fazer uma busca no arquivo.
-Quando encontrarmos, abrimos o projeto todo.
+Quando encontrarmos, abrimos o projeto todo (1).
+{ .annotate }
+
+    1. :man_raising_hand: Descobri que a ferramenta `fdfind` respeita o arquivo `~/.ignore` se a variável `FD_OPTIONS` for criada (`FD_OPTIONS="--ignore-file=$HOME/.ignore"`). See [fzf aliases](./20250322_fzf_aliases.md).
