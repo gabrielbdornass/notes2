@@ -1,3 +1,9 @@
+---
+tags:
+  - Python
+  - FastApi
+---
+
 # Curso fastApt 1 | Configurando o Ambiente de Desenvolvimento
 
 - [Link aula](https://fastapidozero.dunossauro.com/01/).

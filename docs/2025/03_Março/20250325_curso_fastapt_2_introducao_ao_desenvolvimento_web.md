@@ -1,3 +1,9 @@
+---
+tags:
+  - Python
+  - FastApi
+---
+
 # Curso fastApt 2 | Introdução ao desenvolvimento WEB
 
 - [Link aula](https://fastapidozero.dunossauro.com/02/).
