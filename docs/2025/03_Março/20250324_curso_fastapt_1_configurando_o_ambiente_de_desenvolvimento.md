@@ -3,10 +3,11 @@
 - [Link aula](https://fastapidozero.dunossauro.com/01/).
 
 - O pipx é uma ferramenta usada para instalar e executar ferramentas Python globalmente no sistema de forma segura.
-    - `pip install --user pipx`: Flag `--user` install to the Python user install directory for your platform. Typically ~/.local/, or %APPDATA%\Python on Windows.
+    - `pip install --user pipx`: Flag `--user` install to the Python user install directory for your platform. Typically `~/.local/`, or `%APPDATA%\Python` on Windows.
     - Acredito que minha instalação for por pacote, pois foi recomendado:
 
-    > Caso você tenha um gerenciador de pacotes no seu sistema operacional, é extremamente recomendado que você instale o pipx por ele.
+        > Caso você tenha um gerenciador de pacotes no seu sistema operacional, é extremamente recomendado que você instale o pipx por ele.
+
     - [How do I reload ZSH config files without replacing the current shell?](./20250324_how_do_i_reload_zsh_config_files_without_replacing_the_current_shell.md).
 
 - A versão Poetry 2.1.1 gerencia versões Python instaladas na máquina: `poetry python install 3.13`.
@@ -50,7 +51,8 @@ poetry add 'fastapi[standard]'
 
 - `poetry add --group dev pytest pytest-cov taskipy ruff`
 
-- Parei em [estrutura de teste](https://fastapidozero.dunossauro.com/01/#__tabbed_3_1:~:text=a%20cobertura%20atualizada.-,Estrutura%20de%20um%20teste,-Agora%20que%20escrevemos).
+- [Estrutura AAA de um teste](https://xp123.com/3a-arrange-act-assert/).
+
 
 ## Outras referências
 
