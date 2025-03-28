@@ -13,4 +13,3 @@ Ele consegue "barrar" o request antes dele ser exposto à nossa função de endp
 **Evitando que diversos casos estranhos sejam cobertos de forma transparente**.
 Tanto em relação aos tipos dos campos, quanto em relação aos campos que deveriam ser enviados, mas não foram.
 
-- Parei em Implementando a Rota PUT
