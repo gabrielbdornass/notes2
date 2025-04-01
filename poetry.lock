@@ -794,6 +794,21 @@ files = [
 ]
 
 [[package]]
+name = "mkdocs-task-collector"
+version = "0.1.14"
+description = "A MkDocs plugin to collect TODO, NOTE, and PLACEHOLDER annotations."
+optional = false
+python-versions = ">=3.6"
+groups = ["main"]
+files = [
+    {file = "mkdocs_task_collector-0.1.14-py3-none-any.whl", hash = "sha256:f3d75f1d0e69ba31e3c2fc1baafc80f9f833bad4fa25045d8639086604339a7c"},
+    {file = "mkdocs_task_collector-0.1.14.tar.gz", hash = "sha256:c37088ce27b2ed6cfe31d9817b42909a1077b2397a66a0a973cabc73f7ab0605"},
+]
+
+[package.dependencies]
+mkdocs = ">=1.1"
+
+[[package]]
 name = "mkdocs-video"
 version = "1.5.0"
 description = ""
@@ -1424,4 +1439,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13.1,<4.0"
-content-hash = "3143511bdd598d24e4e3451fabe6079addcbda8aa196aa13f11ead1eb5390d35"
+content-hash = "3495445d3faacee9de54521fd720d34d77b4b6d289db46f4f7bf9ba91738c646"
