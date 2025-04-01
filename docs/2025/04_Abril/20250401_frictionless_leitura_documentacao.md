@@ -21,6 +21,6 @@ tags:
     - Todos as branchs são mergiadas na `next` e somente depois esta é mergiada na `main` utilizando a estratégia "Create a merge commit".
     - Seria interessante entender porque as estrétégias `squash` e `merge commit` são utilizadas para cada um dos pontos do fluxo.
     TODO: Entender melhor a diferença entre "Squash and merge" e "Create a merge commit" e qual a melhor situação para utilizar cada uma delas.
-
+    TODO: Escrever issue repositório https://github.com/costantinoai/mkdocs-task-collector para erro `ERROR   -  Config value 'plugins': The "task_collector" plugin is not installed Aborted with a configuration error!`. Basta adicionar o plugin como `task-collector`.
 
 - Parei na parte [Codebase contribution](https://datapackage.org/overview/contributing/#codebase-contribution).
