@@ -29,6 +29,8 @@ Após iniciar estudo da ferramenta [fzf](https://github.com/junegunn/fzf) com au
             1. :man_raising_hand: Alias `fd='find . -type d -name'`.
             2. :man_raising_hand: Comando `unalias fd` não é definitivo. O alias retorna ao abrir outro terminal.
 
+        - Quando fui instalar em meu wsl da CAMG, tive que instalar a ferramenta [fd](https://github.com/sharkdp/fd?tab=readme-ov-file#on-ubuntu) usando o comando `apt install fd-find`.
+
     - Configuração `export FD_OPTIONS="--ignore-file=$HOME/.ignore"`:
 
         - Durante os testes iniciais identifiquei o retorno do diretório `gabrielbdornas/.cache` ao buscar a pasta `notes`. `fdfind` automaticamente respeita configurações incluídas em arquivos `.gitignore`, mas como a pasta home (`/home/gabrielbdornas`) não possui arquivo `.gitignore` ela continuaria entrando nas pesquisas. **Para solucionar o problema criei o arquivo `~/.ignore` e adicionei `.cache` no mesmo**. Por fim, para que este arquivo fosse lido, tive que incluir a linha `export FD_OPTIONS="--ignore-file=$HOME/.ignore"` antes da criação dos comandos `cdh` e `cda`.
