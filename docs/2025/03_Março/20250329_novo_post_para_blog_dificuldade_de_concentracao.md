@@ -1,3 +1,8 @@
+---
+tags:
+  - Roadmap.sh
+---
+
 # Novo post para blog - dificuldade de concentração
 
 Bom, a ideia aqui é tentar documentar, em formato de blog, minha jornada para o aprendizado auto ditata no mundo da programação.
