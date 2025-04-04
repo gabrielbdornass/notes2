@@ -33,6 +33,7 @@ plugins:
 
 markdown_extensions:
   - footnotes
+  - pymdownx.keys
   - admonition
   - pymdownx.details
   - pymdownx.superfences
