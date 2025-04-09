@@ -4,8 +4,8 @@ on:
   # Allow manual triggers.
   workflow_dispatch:
   # Automatically run once a week.
-  schedule:
-    - cron: "0 0 * * 1"
+  # schedule:
+  #  - cron: "0 0 * * 1"
 
 jobs:
   packages_update:
